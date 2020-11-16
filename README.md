@@ -1,2 +1,1 @@
-# asdjgfr.github.io
-js.org page
+个人博客
