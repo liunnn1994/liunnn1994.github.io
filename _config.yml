@@ -62,4 +62,5 @@ exclude: null
 ignore: null
 theme: icarus
 deploy:
-  type: ""
+  type: "git"
+  branch: gh-pages
