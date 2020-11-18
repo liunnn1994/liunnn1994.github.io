@@ -16,3 +16,7 @@ deploy:
   on:
     branch: main
   local-dir: public
+  matrix:
+  include:
+    - dist: bionic
+    - dist: focal
