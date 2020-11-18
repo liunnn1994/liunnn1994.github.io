@@ -10,7 +10,11 @@ tags:
 
 视频无法播放记得用**现代浏览器**~
 
-在线4K，小水管不用试了。
+在线 4K，小水管不用试了。
+
+在线观看以及下载地址：
+
+<!--more-->
 
 {%raw%}
 
@@ -18,7 +22,6 @@ tags:
 
 {%endraw%}
 
-  下载地址：
-<!--more-->
+下载地址：
 
 [onedrive](https://1drv.ms/u/s!AtEHg4dyugUblABq1IAVIN-UZkIZ?e=bnjGqU)
