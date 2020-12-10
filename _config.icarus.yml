@@ -150,7 +150,7 @@ comment:
   # Disqus shortname
   client_id: a776b8ece31855f47113
   client_secret: 2df1e3beabc83813855e4de796119f31c4fad91e
-  repo: https://github.com/asdjgfr/blogMessageBoard
+  repo: https://github.com/asdjgfr/asdjgfr.github.io
   owner: adjgfr
   admin:
     - adjgfr
