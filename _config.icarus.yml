@@ -151,9 +151,9 @@ comment:
   client_id: a776b8ece31855f47113
   client_secret: 2df1e3beabc83813855e4de796119f31c4fad91e
   repo: asdjgfr.github.io
-  owner: adjgfr
+  owner: asdjgfr
   admin:
-    - adjgfr
+    - asdjgfr
   language: zh-CN # 可选填
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
