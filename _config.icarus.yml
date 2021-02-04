@@ -108,6 +108,9 @@ navbar:
     GitHub:
       icon: fab fa-github
       url: "https://github.com/asdjgfr"
+    张远林的个人日志:
+      icon: fab fa-link
+      url: "http://zylweb.top/"
 # Page footer configurations
 footer:
   # Links to be shown on the right of the footer section
