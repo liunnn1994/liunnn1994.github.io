@@ -108,9 +108,6 @@ navbar:
     GitHub:
       icon: fab fa-github
       url: "https://github.com/asdjgfr"
-    张远林的个人日志:
-      icon: fab fa-link
-      url: "http://zylweb.top/"
 # Page footer configurations
 footer:
   # Links to be shown on the right of the footer section
@@ -231,6 +228,7 @@ widgets:
     # Names and URLs of the sites
     links:
       GitHub: "https://github.com/asdjgfr"
+      "张远林的个人日志": "http://zylweb.top/"
   # Categories widget configurations
   - # Where should the widget be placed, left sidebar or right sidebar
     position: left
