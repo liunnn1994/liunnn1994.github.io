@@ -62,4 +62,6 @@ exclude: null
 ignore: null
 theme: icarus
 deploy:
-  type: ""
+  type: "git"
+  repo: https://github.com/asdjgfr/asdjgfr.github.io
+  branch: gh-pages

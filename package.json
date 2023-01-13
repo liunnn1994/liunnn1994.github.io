@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "hexo": "^6.3.0",
+    "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
@@ -24,5 +25,5 @@
     "hexo-server": "^3.0.0",
     "hexo-theme-icarus": "^5.1.1"
   },
-  "packageManager": "yarn@1.22.19+"
+  "packageManager": "npm@8.19.2+"
 }
