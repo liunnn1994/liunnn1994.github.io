@@ -117,7 +117,7 @@ print('谷歌云盘挂载成功！')
 
 ```python
 from IPython.display import clear_output
-!git clone https://github.com/asdjgfr/Colab-DAIN.git /content/DAIN
+!git clone https://github.com/liunnn1994/Colab-DAIN.git /content/DAIN
 
 # 这步可能需要15分钟
 # 构建 DAIN.

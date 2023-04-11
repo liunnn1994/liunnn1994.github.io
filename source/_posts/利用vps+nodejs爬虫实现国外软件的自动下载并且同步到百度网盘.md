@@ -3,11 +3,11 @@ title: 利用vps+nodejs爬虫实现国外软件的自动下载并且同步到百
 categories: vps
 date: 2018/7/11 07:21:22
 tags:
-- vps
-- 百度网盘
+  - vps
+  - 百度网盘
 ---
 
-​	买了一个国外的`vps`作为`ss`的服务器使用,但是一个月有1000g的流量根本用不完.后来想到在国内有一些网站的内容下载超级慢体验贼屎(比如`git`),所以利用`node`写了一个小爬虫,下载指定网站的`exe|zip|rar`软件,并且自动同步到百度网盘,美滋滋.
+​ 买了一个国外的`vps`作为`ss`的服务器使用,但是一个月有 1000g 的流量根本用不完.后来想到在国内有一些网站的内容下载超级慢体验贼屎(比如`git`),所以利用`node`写了一个小爬虫,下载指定网站的`exe|zip|rar`软件,并且自动同步到百度网盘,美滋滋.
 
 [我的百度网盘分享](https://pan.baidu.com/s/1pMZr5of)
 
@@ -15,12 +15,12 @@ tags:
 
 密码:8g3a
 
-| 软件列表       |
+| 软件列表   |
 | :--------- |
 | git        |
 | everything |
 
-[github地址](https://github.com/asdjgfr/baiduwangpan_upload)
+[github 地址](https://github.com/liunnn1994/baiduwangpan_upload)
 
 #### `vps`系统为`centos 6 x 64`
 
@@ -124,7 +124,7 @@ node app
 - 测试是否安装成功
 
   ```language-shell
-  node -v 
+  node -v
   ```
 
   出现版本号则安装成功
@@ -151,17 +151,13 @@ node app
 
 `nodejs` 安装完成以后把文件上传到服务器,个人感觉`FlashFXP` 挺好用,带`ui` 界面
 
-然后在服务器执行`node app` 看看是否能下载到`vps` 里**(别忘了在同级目录新建download文件夹)**
-
-
+然后在服务器执行`node app` 看看是否能下载到`vps` 里**(别忘了在同级目录新建 download 文件夹)**
 
 ----------------------------------我是分割线-----------------------
 
-
-
 现在已经可以成功的把文件下载到`vps` 里面了,接下来就需要上传到百度云了,在这用的是`bpcs_uploader` 插件,[作者网站](http://oott123.com/),[作者博客](https://best33.com/)
 
-### bpcs_uploader安装和使用
+### bpcs_uploader 安装和使用
 
 1. 首先安装`php`
 
@@ -169,7 +165,7 @@ node app
    yum install php
    ```
 
-2. 把项目clone到`vps`上
+2. 把项目 clone 到`vps`上
 
    ```language-shell
    git clone https://github.com/oott123/bpcs_uploader.git
@@ -179,18 +175,16 @@ node app
 
    ```language-shell
    cd bpcs_uploader
-   chmod +x bpcs_uploader.php 
+   chmod +x bpcs_uploader.php
    ```
 
 4. 初始化脚本
 
    ```language-shell
-   ./bpcs_uploader.php quickinit 
+   ./bpcs_uploader.php quickinit
    ```
 
-
-
-这个时候终端会询问你是否初始化，输入Y，然后会打印出许多文字，其中包括授权码。
+这个时候终端会询问你是否初始化，输入 Y，然后会打印出许多文字，其中包括授权码。
 
 在浏览器中访问[百度授权申请](https://openapi.baidu.com/device)。输入授权码，确定，成功后返回终端按回车键，看到屏幕上打印出了你百度网盘的容量，证明初始化完成。
 
@@ -226,9 +220,9 @@ function searchFile(){
     then
       ergodic $1"/"$file
     else
-      local path=$1"/"$file 
-      #local name=$file      
-      #local size=`du --max-depth=1 $path|awk '{print $1}'` 
+      local path=$1"/"$file
+      #local name=$file
+      #local size=`du --max-depth=1 $path|awk '{print $1}'`
       #echo $name $path $size
       #可以得到文件的名称，路径和大小，路径包含名称
       /root/bpcs_uploader/bpcs_uploader.php upload $path $baidupan_DIR/$path
@@ -236,7 +230,7 @@ function searchFile(){
   done
 }
 #这个必须要，否则会在文件名中有空格时出错
-IFS=$'\n' 
+IFS=$'\n'
 #这里是你要批量上传文件的路径
 searchFile "/usr/syncdir/download"
 exit 0
@@ -282,7 +276,7 @@ service crond start    //启动服务
 service crond stop     //关闭服务
 service crond restart  //重启服务
 service crond reload   //重新载入配置
-service crond status   //查看服务状态 
+service crond status   //查看服务状态
 ```
 
 执行
@@ -297,7 +291,7 @@ crontab -e
 0 2 * * 1 /你的路径/upload.sh
 ```
 
-以上的意思为每周一的凌晨2点执行`upload.sh` 脚本一次
+以上的意思为每周一的凌晨 2 点执行`upload.sh` 脚本一次
 
 然后按下`esc`,输入`:wq`保存并退出
 

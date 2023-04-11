@@ -8,7 +8,7 @@ on:
 env:
   GIT_USER: liu
   GIT_EMAIL: liunian@2077tech.com
-  DEPLOY_REPO: asdjgfr/asdjgfr.github.io
+  DEPLOY_REPO: liunnn1994/liunnn1994.github.io
   DEPLOY_BRANCH: gh-pages
 
 jobs:

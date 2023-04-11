@@ -11,7 +11,7 @@ tags:
 
 ### 走过路过先来波 start
 
-[项目地址](https://github.com/asdjgfr/operationRecord)
+[项目地址](https://github.com/liunnn1994/operationRecord)
 
 ![示例](https://image.2077tech.com/uploads/big/535bf16b6950eb6b88fb38df50b15565.gif)
 
@@ -76,12 +76,12 @@ const record = new Record({
   msg: "你这东西有bug啊", //提交bug信息，最多255
   isReport: "1", //是否认为上报，1：是，0：否。默认：0
   interval: "2000", //提交间隔，默认10秒，单位ms
-  success: function(res) {
+  success: function (res) {
     console.log(`成功的回调${res}`);
   },
-  error: function(err) {
+  error: function (err) {
     console.log(`失败的回调${err}`);
-  }
+  },
 });
 //方法
 record.destroy(); //销毁
@@ -114,9 +114,9 @@ console.log(record); //查看属性
         projectName: "testProject",
         msg: "测试信息",
         interval: 20000,
-        success: function(res) {
+        success: function (res) {
           console.log(res);
-        }
+        },
       });
     </script>
   </body>
@@ -163,6 +163,6 @@ console.log(record); //查看属性
 
 ## 🤝 参与共建 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[提交 pr](https://github.com/asdjgfr/operationRecord/pulls)
+[提交 pr](https://github.com/liunnn1994/operationRecord/pulls)
 
-[提交 issue](https://github.com/asdjgfr/operationRecord/issues)
+[提交 issue](https://github.com/liunnn1994/operationRecord/issues)
