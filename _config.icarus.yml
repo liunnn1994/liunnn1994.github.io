@@ -2,7 +2,7 @@ version: 5.1.0
 variant: cyberpunk
 logo: /img/logo.svg
 head:
-  favicon: /img/favicon.svg
+  favicon: /favicon.svg
   manifest:
     name: 刘念的个人博客
     short_name: 个人博客
@@ -120,9 +120,6 @@ widgets:
       Github:
         icon: fab fa-github
         url: https://github.com/liunnn1994
-      QQ:
-        icon: fab fa-qq
-        url: tencent://message/?uin=1041001122&Site=2077tech.com&Menu=yes
   - position: left
     type: toc
     index: true
@@ -132,7 +129,6 @@ widgets:
     type: links
     links:
       GitHub: https://github.com/liunnn1994
-      张远林的个人日志: http://zylweb.top/
   - position: left
     type: categories
   - position: left
