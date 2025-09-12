@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node_version: [24.x]
+        node_version: [22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -23,12 +23,11 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node_version }}
+          package-manager-cache: false
 
-      - name: 安装 corepack
+      - name: 启用 corepack
         run: |
-          npm install -g corepack
           corepack enable
-          corepack install pnpm -g
 
       - name: 获取 pnpm 缓存目录
         id: pnpm-cache-dir-path
