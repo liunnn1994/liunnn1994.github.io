@@ -5,12 +5,6 @@ on:
     branches:
       - main
 
-env:
-  GIT_USER: liu
-  GIT_EMAIL: liunian@2077tech.com
-  DEPLOY_REPO: liunnn1994/liunnn1994.github.io
-  DEPLOY_BRANCH: gh-pages
-
 jobs:
   build:
     name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
@@ -18,40 +12,49 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node_version: [16.x]
+        node_version: [22.x]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Checkout deploy repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          repository: ${{ env.DEPLOY_REPO }}
-          ref: ${{ env.DEPLOY_BRANCH }}
-          path: .deploy_git
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Use Node.js ${{ matrix.node_version }}
-        uses: actions/setup-node@v3
+      - name: 使用 Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node_version }}
 
-      - name: Configuration environment
-        env:
-          HEXO_DEPLOY_KEY: ${{secrets.HEXO_DEPLOY_KEY}}
+      - name: 缓存
+        shell: bash
         run: |
-          sudo timedatectl set-timezone "Asia/Shanghai"
-          mkdir -p ~/.ssh/
-          echo "$HEXO_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.name $GIT_USER
-          git config --global user.email $GIT_EMAIL
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
-      - name: Install dependencies
-        run: |
-          npm install
+      - name: 安装依赖
+        run: pnpm install
 
-      - name: Deploy hexo
-        run: |
-          npm run deploy
+      - name: 构建
+        run: pnpm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
