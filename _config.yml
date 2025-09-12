@@ -1,11 +1,11 @@
 title: 刘念的个人博客
-subtitle: "刘念的个人博客"
-description: "刘念的个人博客"
+subtitle: 刘念的个人博客
+description: 刘念的个人博客
 keywords: 刘念的个人博客
 author: 刘念
 language: zh-CN
 timezone: ""
-url: "https://liunian.js.org"
+url: https://liunian.js.org
 root: /
 permalink: ":year/:month/:day/:title/"
 permalink_defaults: null
@@ -53,15 +53,16 @@ category_map: null
 tag_map: null
 meta_generator: true
 date_format: YYYY-MM-DD
-time_format: "HH:mm:ss"
+time_format: HH:mm:ss
 updated_option: mtime
 per_page: 10
 pagination_dir: page
-include: null
+include:
+  - "css/*"
 exclude: null
 ignore: null
 theme: icarus
 deploy:
-  type: "git"
+  type: git
   repo: https://github.com/liunnn1994/liunnn1994.github.io
   branch: gh-pages

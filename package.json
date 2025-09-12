@@ -12,18 +12,21 @@
     "version": "7.3.0"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
     "hexo": "^7.3.0",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-postcss": "^2.1.1",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-inferno": "^1.0.2",
     "hexo-renderer-marked": "^7.0.1",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
-    "hexo-theme-icarus": "^6.1.1"
+    "hexo-theme-icarus": "^6.1.1",
+    "tailwindcss": "^4.1.13"
   },
   "packageManager": "pnpm@10.15.1",
   "engines": {
