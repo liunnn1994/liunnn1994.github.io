@@ -1,0 +1,3 @@
+onlyBuiltDependencies:
+  - hexo-util
+  - inferno
