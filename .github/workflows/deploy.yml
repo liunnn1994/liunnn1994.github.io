@@ -30,18 +30,18 @@ jobs:
           corepack enable
           corepack install pnpm -g
 
-      - name: 获取 pnpm 缓存目录
-        id: pnpm-cache-dir-path
-        run: echo "dir=$(pnpm store path --silent)" >> $GITHUB_OUTPUT
+      # - name: 获取 pnpm 缓存目录
+      #   id: pnpm-cache-dir-path
+      #   run: echo "dir=$(pnpm store path --silent)" >> $GITHUB_OUTPUT
 
-      - name: 缓存
-        uses: actions/cache@v4
-        id: pnpm-cache
-        with:
-          path: ${{ steps.pnpm-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+      # - name: 缓存
+      #   uses: actions/cache@v4
+      #   id: pnpm-cache
+      #   with:
+      #     path: ${{ steps.pnpm-cache-dir-path.outputs.dir }}
+      #     key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-pnpm-store-
 
       - name: 安装依赖
         run: pnpm install
