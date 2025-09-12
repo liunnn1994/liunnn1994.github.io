@@ -28,6 +28,7 @@ jobs:
         run: |
           npm install -g corepack
           corepack enable
+          corepack install pnpm -g
 
       - name: 获取 pnpm 缓存目录
         id: pnpm-cache-dir-path
