@@ -28,7 +28,7 @@
     "hexo-theme-icarus": "^6.1.1",
     "tailwindcss": "^4.1.13"
   },
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.16.1",
   "engines": {
     "node": "~22.19.0"
   },
