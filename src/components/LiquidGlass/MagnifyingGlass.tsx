@@ -130,7 +130,10 @@ export const MagnifyingGlass: React.FC = () => {
               <span className="text-black/40 dark:text-white/40">—</span>
               IOS&nbsp;26
             </h3>
-            <div className="mt-4 max-w-[60ch] indent-[2em] text-[12px] sm:text-[14px] leading-[1.55] text-black/70 dark:text-white/70 space-y-3">
+            <div className="mt-4 max-w-[60ch] indent-[2em] text-[12px] sm:text-[14px] leading-[1.55] text-black/70 dark:text-white/70 space-y-3 overflow-auto">
+              <p>
+                拖拽透镜查看折射效果
+              </p>
               <p>
                 世界第一高峰珠峰以其雄伟的金字塔状外形，给人留下了深刻印象。不过细究起来，珠峰其实并非标准的“金字塔”（指侧面为等边三角形），而世界海拔排名第二的山峰乔戈里峰，则要比珠峰在外形上更接近等边三角形。在高海拔地区，一般人要想看到乔戈里这样的金字塔峰并非易事。不过在我国藏东南地区，类似乔戈里峰形的雪山比比皆是。这一现象，背后究竟隐藏着什么秘密？目前这些山峰绝大多数都未被外界所知，未来是否会成为人们欣赏的对象？
               </p>

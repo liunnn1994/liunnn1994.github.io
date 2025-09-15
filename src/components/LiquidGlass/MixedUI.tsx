@@ -2396,7 +2396,7 @@ const AlbumGrid: React.FC<AlbumGridProps> = ({
               <img
                 src={upscaleArtwork(item.artworkUrl100)}
                 alt={title}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover m-0"
                 draggable={false}
                 loading="lazy"
               />
