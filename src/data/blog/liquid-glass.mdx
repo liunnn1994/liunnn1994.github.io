@@ -1,0 +1,81 @@
+---
+title: "使用 CSS 和 SVG 实现苹果液态玻璃效果"
+author: Norris Lau
+slug: liquid-glass
+featured: true
+draft: false
+description: "使用 CSS 和 SVG 技术来实现类似苹果液态玻璃的视觉效果。"
+pubDatetime: 2025-09-15T16:18:42.000Z
+modDatetime: 2025-09-15T16:18:42.000Z
+ogImage: "https://www.apple.com.cn/newsroom/images/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/geo/Apple-WWDC25-Liquid-Glass-hero-250609_big.jpg.large_2x.jpg"
+tags:
+  - CSS
+  - SVG
+  - 前端
+  - 苹果
+  - liquid glass
+  - 液体玻璃
+  - iOS 26
+  - Apple
+  - WWDC 2025
+---
+
+import { MagnifyingGlass } from "../../components/LiquidGlass/MagnifyingGlass";
+import { MixedUI } from "../../components/LiquidGlass/MixedUI";
+import { Searchbox } from "../../components/LiquidGlass/Searchbox";
+import { Slider } from "../../components/LiquidGlass/Slider";
+import { Switch } from "../../components/LiquidGlass/Switch";
+
+五年没写博客了，web 技术已经像火箭一样飞起来了，趁着苹果推送了 iOS 26 正式版，蹭一蹭流量，使用 CSS 和 SVG 实现苹果液态玻璃效果。
+
+Apple 在 6 月的 WWDC 2025 期间推出了[液态玻璃效果](https://www.apple.com.cn/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/)，虽然网上褒贬不一，不过按照以往的惯例，苹果出了大概率会引领设计潮流。
+
+根据[开发文档](https://developer.apple.com/documentation/TechnologyOverviews/adopting-liquid-glass)的描述，简单来说就是一种动态界面材质，融合玻璃的光学特性与流体感。
+
+先看一下官方的宣传片：
+
+<iframe
+  class="aspect-video w-full"
+  src="//player.bilibili.com/player.html?isOutside=true&aid=114655276042305&bvid=BV1MFT6zcErv&cid=30413095408&p=1"
+  scrolling="no"
+  border="0"
+  frameborder="no"
+  framespacing="0"
+  allowfullscreen="true"
+></iframe>
+
+<br />
+
+## 有限可用
+
+由于使用了很多先进的特性，比如 `backdrop‑filter` svg 等，本文的代码在仅在新版 Chrome/Edge 中正常工作
+
+![有限可用](https://developer.mozilla.org/zh-CN/docs/Glossary/Baseline/Compatibility/low.png)
+
+## 折射
+
+<MagnifyingGlass client:visible client:only="react" />
+
+<br />
+
+## 开关
+
+<Switch client:visible client:only="react" />
+
+<br />
+
+## 滑块
+
+<Slider client:visible client:only="react" />
+
+<br />
+
+## 搜索框
+
+<Searchbox client:visible client:only="react" />
+
+<br />
+
+## 音乐播放器
+
+<MixedUI client:visible client:only="react" />

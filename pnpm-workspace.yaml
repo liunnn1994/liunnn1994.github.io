@@ -1,4 +1,5 @@
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
-  - hexo-util
-  - inferno
+  - canvas
+  - esbuild
+  - sharp

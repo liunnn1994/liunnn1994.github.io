@@ -48,10 +48,10 @@ jobs:
       - name: 构建
         run: pnpm run build
 
-      - name: Upload Pages artifact
+      - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./dist
   deploy:
     needs: build
     permissions:
