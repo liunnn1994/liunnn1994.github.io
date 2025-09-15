@@ -9,7 +9,7 @@ const breadcrumbList = currentUrlPath.split("/").slice(1);
 // if breadcrumb is Home > Posts > 1 <etc>
 // replace Posts with Posts (page number)
 if (breadcrumbList[0] === "posts") {
-  breadcrumbList.splice(0, 2, `博客 (第${breadcrumbList[1] || 1}页)`);
+  breadcrumbList.splice(0, 2, `文章 (第${breadcrumbList[1] || 1}页)`);
 } else if(breadcrumbList[0] === "tags") {
   breadcrumbList.splice(0, 1, `标签`);
 } else if (breadcrumbList[0] === "archives") {
